@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "BlackOpsOne";
+    src: url("BlackOpsOne.ttf");
+}
+
+body {
+    margin: 10rem;
+    margin-top: 3rem;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0 0;
+    background-color: #222222;
+    border-radius: 15px;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu a {
+    font-family:Arial, Helvetica, sans-serif;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu a:hover {
+    background-color: purple;
+    border-radius: 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 180px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.header h1 {
+    font-family: "Playwrite", fantasy;
+    font-size: 3rem;
+    color: black;
+    margin: 0;
+    opacity: 0;
+    animation: slideInLeft 1.35s ease-out .75s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.header_img {
+    animation: slideFromTop 1s ease-out;
+}
+.header {
+    background-image: url("");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
