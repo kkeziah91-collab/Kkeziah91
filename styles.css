@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "BlackOpsOne";
+    src: url("fonts/BlackOpsOne.ttf");
+}
+
+body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0 0;
+    background-color: #222222;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu a {
+    font-family:Arial, Helvetica, sans-serif;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu a:hover {
+    background-color: purple;
+    border-top-left-radius: 15px;
+    border-radius: 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 180px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.header h1 {
+    font-family: "Playwrite", fantasy;
+    font-size: 3rem;
+    color: black;
+    margin: 0;
+    opacity: 0;
+    animation: slideInLeft 1.35s ease-out .75s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.header_img {
+    animation: slideFromTop 1s ease-out;
+    width: 12rem;
+}
+.header {
+    background-image: url("");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+main {
+    padding: 20px;
+}
+h2 {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+footer {
+    background-image: url("images/border.gif");
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-size: auto 50px;
+    padding-top: 50px;
+    
+}
+.contact_row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 10px;
+    background-color: #222222;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.contact_row a img{
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+.contact_row a img:hover{
+    transform: scale(1.3);
+}
