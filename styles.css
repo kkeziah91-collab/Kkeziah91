@@ -4,8 +4,9 @@
 }
 
 body {
-    margin: 10rem;
-    margin-top: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 .menu {
